@@ -16,5 +16,23 @@ namespace pryGestion
         {
             InitializeComponent();
         }
+
+        private void cmdRegistrar_MouseLeave(object sender, EventArgs e)
+        {
+            lblRegistar.Visible = false;
+        }
+
+        private void cmdRegistrar_MouseEnter(object sender, EventArgs e)
+        {
+            lblRegistar.Visible = true;
+        }
+
+        private void cmdRegistrar_Click(object sender, EventArgs e)
+        {
+            frmRegistrar registrar = new frmRegistrar();
+            this.Hide();
+            registrar.ShowDialog();
+            this.Show();
+        }
     }
 }
