@@ -47,6 +47,7 @@
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.cmdVer = new System.Windows.Forms.Button();
             this.gbReunion.SuspendLayout();
             this.gbTareas.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +100,13 @@
             // 
             this.cbTipoActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoActividad.FormattingEnabled = true;
+            this.cbTipoActividad.Items.AddRange(new object[] {
+            "Relevamiento",
+            "Propuesta",
+            "Diagnostico",
+            "Analisis",
+            "Diagrama BD",
+            "Programacion"});
             this.cbTipoActividad.Location = new System.Drawing.Point(138, 49);
             this.cbTipoActividad.Name = "cbTipoActividad";
             this.cbTipoActividad.Size = new System.Drawing.Size(121, 21);
@@ -127,6 +135,7 @@
             // optNo
             // 
             this.optNo.AutoSize = true;
+            this.optNo.Checked = true;
             this.optNo.Location = new System.Drawing.Point(41, 62);
             this.optNo.Name = "optNo";
             this.optNo.Size = new System.Drawing.Size(39, 17);
@@ -142,7 +151,6 @@
             this.optSi.Name = "optSi";
             this.optSi.Size = new System.Drawing.Size(34, 17);
             this.optSi.TabIndex = 0;
-            this.optSi.TabStop = true;
             this.optSi.Text = "Si";
             this.optSi.UseVisualStyleBackColor = true;
             // 
@@ -154,7 +162,7 @@
             this.gbTareas.Controls.Add(this.chkRepositorio);
             this.gbTareas.Location = new System.Drawing.Point(18, 246);
             this.gbTareas.Name = "gbTareas";
-            this.gbTareas.Size = new System.Drawing.Size(317, 100);
+            this.gbTareas.Size = new System.Drawing.Size(241, 100);
             this.gbTareas.TabIndex = 8;
             this.gbTareas.TabStop = false;
             this.gbTareas.Text = "Tareas";
@@ -201,21 +209,23 @@
             // 
             // cmdCancelar
             // 
-            this.cmdCancelar.Location = new System.Drawing.Point(184, 352);
+            this.cmdCancelar.Location = new System.Drawing.Point(163, 352);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(75, 23);
             this.cmdCancelar.TabIndex = 9;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // cmdRegistrar
             // 
-            this.cmdRegistrar.Location = new System.Drawing.Point(66, 352);
+            this.cmdRegistrar.Location = new System.Drawing.Point(49, 352);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(75, 23);
             this.cmdRegistrar.TabIndex = 10;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
             // 
             // label5
             // 
@@ -226,11 +236,22 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Grabar la seleccion en variables";
             // 
+            // cmdVer
+            // 
+            this.cmdVer.Location = new System.Drawing.Point(97, 381);
+            this.cmdVer.Name = "cmdVer";
+            this.cmdVer.Size = new System.Drawing.Size(93, 23);
+            this.cmdVer.TabIndex = 12;
+            this.cmdVer.Text = "Ver Actividades";
+            this.cmdVer.UseVisualStyleBackColor = true;
+            this.cmdVer.Click += new System.EventHandler(this.cmdVer_Click);
+            // 
             // frmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmdVer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.cmdCancelar);
@@ -246,7 +267,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRegistrar";
+            this.Text = "Registrar Actividad";
+            this.Load += new System.EventHandler(this.frmRegistrar_Load);
             this.gbReunion.ResumeLayout(false);
             this.gbReunion.PerformLayout();
             this.gbTareas.ResumeLayout(false);
@@ -276,5 +298,6 @@
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button cmdVer;
     }
 }

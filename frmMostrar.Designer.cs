@@ -43,6 +43,7 @@
             this.cbActividad.Name = "cbActividad";
             this.cbActividad.Size = new System.Drawing.Size(121, 21);
             this.cbActividad.TabIndex = 0;
+            this.cbActividad.SelectedIndexChanged += new System.EventHandler(this.cbActividad_SelectedIndexChanged);
             // 
             // lblActividad
             // 
@@ -69,6 +70,7 @@
             this.cmdVolver.TabIndex = 3;
             this.cmdVolver.Text = "Volver";
             this.cmdVolver.UseVisualStyleBackColor = true;
+            this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
             // frmMostrar
             // 
@@ -82,7 +84,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMostrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMostrar";
+            this.Text = "Mostrar Actividades";
+            this.Load += new System.EventHandler(this.frmMostrar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
