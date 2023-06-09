@@ -45,25 +45,41 @@ namespace pryGestion
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
+            bool error = false;
             Actividad actividad= new Actividad();
-            if (dtpFecha.Value >= DateTime.Today) 
+            if (dtpFecha.Value >= DateTime.Today)
             {
                 fecha = dtpFecha.Value;
                 actividad.Fecha = fecha;
-            } 
-            else MessageBox.Show("Error. Seleccione la fecha de hoy o posterior.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            if (cbTipoActividad.SelectedIndex != -1)
-            {
-                tipo = cbTipoActividad.Text;
-                actividad.Tipo = tipo;
+                error = false;
+                if (cbTipoActividad.SelectedIndex != -1)
+                {
+                    tipo = cbTipoActividad.Text;
+                    actividad.Tipo = tipo;
+                    error = false;
+                    if (txtDetalle.Text != "")
+                    {
+                        detalle = txtDetalle.Text;
+                        actividad.Detalle = detalle;
+                        error = false;
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Error. Detalle erroneo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        error = true;
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("Error. Seleccione una actividad.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    error = true;
+                }
             }
-            else MessageBox.Show("Error. Seleccione una actividad.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            if (txtDetalle.Text != "" || txtDetalle.Text == " ")
+            else 
             {
-                detalle = txtDetalle.Text;
-                actividad.Detalle = detalle;
+                MessageBox.Show("Error. Seleccione la fecha de hoy o posterior.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                error = true;
             }
-            else MessageBox.Show("Error. Detalle erroneo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             reunion = optSi.Checked;
             actividad.Reunion = reunion;
             for (int i = 0; i < checkboxes.Count; i++)
@@ -73,15 +89,18 @@ namespace pryGestion
                     actividad.Tareas += checkboxes[i].Text + " ";
                 }
             }
-            try
+            if (!error)
             {
-                actividades.Add(actividad);
-                MessageBox.Show("Se agrego la actividad: " + actividad.Tipo + " del día: " + actividad.Fecha.ToString("dd/MM/yyyy"));
-                resetearCampos();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No se pudo agregar la actividad, verifique los campos.");
+                try
+                {
+                    actividades.Add(actividad);
+                    MessageBox.Show("Se agrego la actividad: " + actividad.Tipo + " del día: " + actividad.Fecha.ToString("dd/MM/yyyy"));
+                    resetearCampos();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se pudo agregar la actividad, verifique los campos.");
+                }
             }
         }
 
