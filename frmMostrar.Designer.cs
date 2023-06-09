@@ -39,7 +39,7 @@
             // 
             this.cbActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbActividad.FormattingEnabled = true;
-            this.cbActividad.Location = new System.Drawing.Point(120, 25);
+            this.cbActividad.Location = new System.Drawing.Point(198, 30);
             this.cbActividad.Name = "cbActividad";
             this.cbActividad.Size = new System.Drawing.Size(121, 21);
             this.cbActividad.TabIndex = 0;
@@ -48,7 +48,7 @@
             // lblActividad
             // 
             this.lblActividad.AutoSize = true;
-            this.lblActividad.Location = new System.Drawing.Point(28, 28);
+            this.lblActividad.Location = new System.Drawing.Point(106, 33);
             this.lblActividad.Name = "lblActividad";
             this.lblActividad.Size = new System.Drawing.Size(51, 13);
             this.lblActividad.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 450);
+            this.ClientSize = new System.Drawing.Size(397, 373);
             this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.lbMostrarActividades);
             this.Controls.Add(this.lblActividad);

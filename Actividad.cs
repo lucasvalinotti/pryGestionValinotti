@@ -13,6 +13,5 @@ namespace pryGestion
         public string Detalle { get; set; }
         public bool Reunion { get; set; }
         public string Tareas { get; set; }
-
     }
 }
