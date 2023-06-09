@@ -141,6 +141,7 @@
             this.optSi.TabIndex = 0;
             this.optSi.Text = "Si";
             this.optSi.UseVisualStyleBackColor = true;
+            this.optSi.CheckedChanged += new System.EventHandler(this.optSi_CheckedChanged);
             // 
             // gbTareas
             // 
@@ -148,6 +149,7 @@
             this.gbTareas.Controls.Add(this.chkNotas);
             this.gbTareas.Controls.Add(this.chkInvestigacion);
             this.gbTareas.Controls.Add(this.chkRepositorio);
+            this.gbTareas.Enabled = false;
             this.gbTareas.Location = new System.Drawing.Point(18, 246);
             this.gbTareas.Name = "gbTareas";
             this.gbTareas.Size = new System.Drawing.Size(241, 100);

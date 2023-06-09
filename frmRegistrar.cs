@@ -65,11 +65,34 @@ namespace pryGestion
             {
                 actividades.Add(actividad);
                 MessageBox.Show("Se agrego la actividad: " + actividad.Tipo + " del día: " + actividad.Fecha.ToString("dd/MM/yyyy"));
+                resetearCampos();
             }
             catch (Exception)
             {
                 MessageBox.Show("No se pudo agregar la actividad, verifique los campos.");
             }
         }
+
+        private void optSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optSi.Checked)
+            {
+                gbTareas.Enabled = true;
+            }
+            else
+            {
+                gbTareas.Enabled = false;
+            }
+        }
+
+        private void resetearCampos()
+        {
+            cbTipoActividad.Text = ""; txtDetalle.Text = "";
+            for (int i = 0; i < checkboxes.Count; i++)
+            {
+                checkboxes[i].Checked = false;
+            }
+        }
+
     }
 }
