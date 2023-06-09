@@ -59,9 +59,10 @@
             // txtContrasena
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.Color.Fuchsia;
             this.txtContrasena.Location = new System.Drawing.Point(47, 157);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '#';
+            this.txtContrasena.PasswordChar = '♥';
             this.txtContrasena.Size = new System.Drawing.Size(321, 33);
             this.txtContrasena.TabIndex = 9;
             // 
