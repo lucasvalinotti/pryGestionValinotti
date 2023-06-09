@@ -33,13 +33,15 @@
             this.lblActividad = new System.Windows.Forms.Label();
             this.lbMostrarActividades = new System.Windows.Forms.ListBox();
             this.cmdVolver = new System.Windows.Forms.Button();
+            this.dgvActividades = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             this.SuspendLayout();
             // 
             // cbActividad
             // 
             this.cbActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbActividad.FormattingEnabled = true;
-            this.cbActividad.Location = new System.Drawing.Point(198, 30);
+            this.cbActividad.Location = new System.Drawing.Point(382, 26);
             this.cbActividad.Name = "cbActividad";
             this.cbActividad.Size = new System.Drawing.Size(121, 21);
             this.cbActividad.TabIndex = 0;
@@ -48,7 +50,7 @@
             // lblActividad
             // 
             this.lblActividad.AutoSize = true;
-            this.lblActividad.Location = new System.Drawing.Point(106, 33);
+            this.lblActividad.Location = new System.Drawing.Point(290, 29);
             this.lblActividad.Name = "lblActividad";
             this.lblActividad.Size = new System.Drawing.Size(51, 13);
             this.lblActividad.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             // cmdVolver
             // 
-            this.cmdVolver.Location = new System.Drawing.Point(155, 317);
+            this.cmdVolver.Location = new System.Drawing.Point(366, 319);
             this.cmdVolver.Name = "cmdVolver";
             this.cmdVolver.Size = new System.Drawing.Size(75, 23);
             this.cmdVolver.TabIndex = 3;
@@ -72,11 +74,23 @@
             this.cmdVolver.UseVisualStyleBackColor = true;
             this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
+            // dgvActividades
+            // 
+            this.dgvActividades.AllowUserToAddRows = false;
+            this.dgvActividades.AllowUserToDeleteRows = false;
+            this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActividades.Location = new System.Drawing.Point(366, 73);
+            this.dgvActividades.Name = "dgvActividades";
+            this.dgvActividades.ReadOnly = true;
+            this.dgvActividades.Size = new System.Drawing.Size(423, 225);
+            this.dgvActividades.TabIndex = 4;
+            // 
             // frmMostrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 373);
+            this.ClientSize = new System.Drawing.Size(801, 373);
+            this.Controls.Add(this.dgvActividades);
             this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.lbMostrarActividades);
             this.Controls.Add(this.lblActividad);
@@ -86,6 +100,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mostrar Actividades";
             this.Load += new System.EventHandler(this.frmMostrar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +112,6 @@
         private System.Windows.Forms.Label lblActividad;
         private System.Windows.Forms.ListBox lbMostrarActividades;
         private System.Windows.Forms.Button cmdVolver;
+        private System.Windows.Forms.DataGridView dgvActividades;
     }
 }

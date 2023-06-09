@@ -62,8 +62,21 @@ namespace pryGestion
                         MessageBox.Show("Contraseña incorrecta!");
                     }
                     break;
-                case "Don Graffu":
-                    if (password == "graffu123")
+                case "Charango":
+                    if (password == "charango123")
+                    {
+                        frmPrincipal frmPrincipal = new frmPrincipal();
+                        this.Hide();
+                        frmPrincipal.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta!");
+                    }
+                    break;
+                case "Archivo Ejecutable":
+                    if (password == ".exe")
                     {
                         frmPrincipal frmPrincipal = new frmPrincipal();
                         this.Hide();

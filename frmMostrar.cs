@@ -27,6 +27,7 @@ namespace pryGestion
         {
             cbActividad.DataSource = actividades;
             cbActividad.ValueMember = "Tipo";
+            dgvActividades.DataSource = actividades;
             mostrarDetalles();
         }
 

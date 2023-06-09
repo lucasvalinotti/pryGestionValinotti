@@ -74,7 +74,8 @@
             "Corcho Dios",
             "Sancor Sampaoli",
             "Lucas Lucon",
-            "Don Graffu"});
+            "Charango",
+            "Archivo Ejecutable"});
             this.cbUsuario.Location = new System.Drawing.Point(47, 82);
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Size = new System.Drawing.Size(321, 30);
@@ -93,6 +94,7 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.cmdIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 298);
