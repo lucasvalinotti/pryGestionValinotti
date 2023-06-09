@@ -73,18 +73,6 @@ namespace pryGestion
             }
         }
 
-        private void optSi_CheckedChanged(object sender, EventArgs e)
-        {
-            if (optSi.Checked)
-            {
-                gbTareas.Enabled = true;
-            }
-            else
-            {
-                gbTareas.Enabled = false;
-            }
-        }
-
         private void resetearCampos()
         {
             cbTipoActividad.Text = ""; txtDetalle.Text = "";
