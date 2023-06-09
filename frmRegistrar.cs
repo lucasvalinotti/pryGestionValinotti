@@ -45,14 +45,26 @@ namespace pryGestion
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
-            fecha = dtpFecha.Value;
-            tipo = cbTipoActividad.Text;
-            detalle = txtDetalle.Text;
-            reunion = optSi.Checked;
             Actividad actividad= new Actividad();
-            actividad.Fecha = fecha;
-            actividad.Tipo = tipo;
-            actividad.Detalle = detalle;
+            if (dtpFecha.Value >= DateTime.Today) 
+            {
+                fecha = dtpFecha.Value;
+                actividad.Fecha = fecha;
+            } 
+            else MessageBox.Show("Error. Seleccione la fecha de hoy o posterior.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (cbTipoActividad.SelectedIndex != -1)
+            {
+                tipo = cbTipoActividad.Text;
+                actividad.Tipo = tipo;
+            }
+            else MessageBox.Show("Error. Seleccione una actividad.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (txtDetalle.Text != "" || txtDetalle.Text == " ")
+            {
+                detalle = txtDetalle.Text;
+                actividad.Detalle = detalle;
+            }
+            else MessageBox.Show("Error. Detalle erroneo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            reunion = optSi.Checked;
             actividad.Reunion = reunion;
             for (int i = 0; i < checkboxes.Count; i++)
             {
