@@ -93,5 +93,10 @@ namespace pryGestion
                     break;
             }
         }
+
+        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtContrasena.Focus();
+        }
     }
 }

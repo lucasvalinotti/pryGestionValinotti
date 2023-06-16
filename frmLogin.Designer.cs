@@ -81,6 +81,7 @@
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Size = new System.Drawing.Size(321, 30);
             this.cbUsuario.TabIndex = 10;
+            this.cbUsuario.SelectedIndexChanged += new System.EventHandler(this.cbUsuario_SelectedIndexChanged);
             // 
             // cmdIngresar
             // 

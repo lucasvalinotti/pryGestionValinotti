@@ -86,7 +86,8 @@ namespace pryGestion
             {
                 if (checkboxes[i].Checked == true)
                 {
-                    actividad.Tareas += checkboxes[i].Text + " ";
+                    actividad.Tareas += checkboxes[i].Text;
+                    if (i != (checkboxes.Count - 1)) actividad.Tareas += " - ";
                 }
             }
             if (!error)

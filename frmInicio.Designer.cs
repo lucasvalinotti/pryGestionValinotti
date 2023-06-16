@@ -54,7 +54,7 @@
             this.lblSubtitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitulo.Location = new System.Drawing.Point(287, 95);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(167, 21);
+            this.lblSubtitulo.Size = new System.Drawing.Size(168, 19);
             this.lblSubtitulo.TabIndex = 7;
             this.lblSubtitulo.Text = "Venta de Vectorrres";
             // 
@@ -70,23 +70,23 @@
             // 
             // cmdLogin
             // 
-            this.cmdLogin.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold);
+            this.cmdLogin.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdLogin.Location = new System.Drawing.Point(153, 198);
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(223, 60);
             this.cmdLogin.TabIndex = 9;
-            this.cmdLogin.Text = "Log In";
+            this.cmdLogin.Text = "Iniciar Sesion";
             this.cmdLogin.UseVisualStyleBackColor = true;
             this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);
             // 
             // cmdSignIn
             // 
-            this.cmdSignIn.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold);
+            this.cmdSignIn.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSignIn.Location = new System.Drawing.Point(153, 281);
             this.cmdSignIn.Name = "cmdSignIn";
             this.cmdSignIn.Size = new System.Drawing.Size(223, 60);
             this.cmdSignIn.TabIndex = 10;
-            this.cmdSignIn.Text = "Sign In";
+            this.cmdSignIn.Text = "Registrarse";
             this.cmdSignIn.UseVisualStyleBackColor = true;
             this.cmdSignIn.Click += new System.EventHandler(this.cmdSignIn_Click);
             // 

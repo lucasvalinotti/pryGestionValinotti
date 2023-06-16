@@ -78,6 +78,7 @@
             // 
             this.dgvActividades.AllowUserToAddRows = false;
             this.dgvActividades.AllowUserToDeleteRows = false;
+            this.dgvActividades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActividades.Location = new System.Drawing.Point(366, 73);
             this.dgvActividades.Name = "dgvActividades";

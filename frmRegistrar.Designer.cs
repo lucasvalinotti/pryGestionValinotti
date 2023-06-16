@@ -172,7 +172,7 @@
             this.chkNotas.Name = "chkNotas";
             this.chkNotas.Size = new System.Drawing.Size(92, 17);
             this.chkNotas.TabIndex = 2;
-            this.chkNotas.Text = "Notas reuniòn";
+            this.chkNotas.Text = "Notas reunión";
             this.chkNotas.UseVisualStyleBackColor = true;
             // 
             // chkInvestigacion
