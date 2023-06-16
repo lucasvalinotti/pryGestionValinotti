@@ -80,11 +80,11 @@
             // 
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtitulo.Location = new System.Drawing.Point(287, 95);
+            this.lblSubtitulo.Location = new System.Drawing.Point(272, 95);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(167, 21);
+            this.lblSubtitulo.Size = new System.Drawing.Size(105, 19);
             this.lblSubtitulo.TabIndex = 4;
-            this.lblSubtitulo.Text = "Venta de Vectorrres";
+            this.lblSubtitulo.Text = "Bienvenido: ";
             // 
             // pbLogo
             // 
@@ -141,6 +141,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de actividades - Desarrollo de Software";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmdRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdVerActividades)).EndInit();

@@ -12,9 +12,11 @@ namespace pryGestion
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
+        public string usuario { get; set; }
+        public frmPrincipal(string nombre)
         {
             InitializeComponent();
+            this.usuario = nombre;
         }
 
         private void cmdRegistrar_MouseLeave(object sender, EventArgs e)
@@ -51,6 +53,11 @@ namespace pryGestion
             this.Hide();
             mostrar.ShowDialog();
             this.Show();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            lblSubtitulo.Text = "Bienvenido: " + this.usuario;
         }
     }
 }

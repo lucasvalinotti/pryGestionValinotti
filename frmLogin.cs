@@ -26,7 +26,7 @@ namespace pryGestion
                 case "Corcho Dios":
                     if (password == "corcho123" )
                     {
-                        frmPrincipal frmPrincipal = new frmPrincipal();
+                        frmPrincipal frmPrincipal = new frmPrincipal(user);
                         this.Hide();
                         frmPrincipal.ShowDialog();
                         this.Close();
@@ -39,7 +39,7 @@ namespace pryGestion
                 case "Sancor Sampaoli":
                     if (password == "sancor123")
                     {
-                        frmPrincipal frmPrincipal = new frmPrincipal();
+                        frmPrincipal frmPrincipal = new frmPrincipal(user);
                         this.Hide();
                         frmPrincipal.ShowDialog();
                         this.Close();
@@ -52,7 +52,7 @@ namespace pryGestion
                 case "Lucas Lucon":
                     if (password == "lucas123")
                     {
-                        frmPrincipal frmPrincipal = new frmPrincipal();
+                        frmPrincipal frmPrincipal = new frmPrincipal(user);
                         this.Hide();
                         frmPrincipal.ShowDialog();
                         this.Close();
@@ -65,7 +65,7 @@ namespace pryGestion
                 case "Charango":
                     if (password == "charango123")
                     {
-                        frmPrincipal frmPrincipal = new frmPrincipal();
+                        frmPrincipal frmPrincipal = new frmPrincipal(user);
                         this.Hide();
                         frmPrincipal.ShowDialog();
                         this.Close();
@@ -78,7 +78,20 @@ namespace pryGestion
                 case "Archivo Ejecutable":
                     if (password == ".exe")
                     {
-                        frmPrincipal frmPrincipal = new frmPrincipal();
+                        frmPrincipal frmPrincipal = new frmPrincipal(user);
+                        this.Hide();
+                        frmPrincipal.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta!");
+                    }
+                    break;
+                case "Wana Wanabi":
+                    if (password == "marielasosa")
+                    {
+                        frmPrincipal frmPrincipal = new frmPrincipal(user);
                         this.Hide();
                         frmPrincipal.ShowDialog();
                         this.Close();

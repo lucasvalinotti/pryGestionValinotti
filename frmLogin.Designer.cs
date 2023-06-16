@@ -76,7 +76,8 @@
             "Sancor Sampaoli",
             "Lucas Lucon",
             "Charango",
-            "Archivo Ejecutable"});
+            "Archivo Ejecutable",
+            "Wana Wanabi"});
             this.cbUsuario.Location = new System.Drawing.Point(47, 82);
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Size = new System.Drawing.Size(321, 30);
